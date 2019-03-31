@@ -6,6 +6,8 @@ Resource          keywords/files.robot
 
 *** Test Cases ***
 Parse Opportunities Into File
-    Open BCBID Opportunities Website
-    Show List Of Opportunities
+    Open BCBID First Page Of Opportunities
+    Sleep  20s
+    Change Page  2
+    Sleep  20s
     [Teardown]    Close Browser
