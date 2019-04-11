@@ -6,3 +6,6 @@ log.html
 report.html
 selenium*.png
 output.xml
+
+#Application generated files
+*.csv
