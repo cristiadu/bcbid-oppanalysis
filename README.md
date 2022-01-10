@@ -10,21 +10,14 @@ This application uses Robot Framework to navigate over the BCBID interface and s
 Execute the following commands in order to properly run the app:
 
 ```
-sudo apt-get install python3 python3-pip -y
-pip3 install robotframework
-pip3 install --upgrade robotframework-seleniumlibrary
-echo "export PATH='$PATH:/home/${USER}/.local/bin'" >> ~/.bashrc
-wget https://chromedriver.storage.googleapis.com/73.0.3683.20/chromedriver_linux64.zip
-unzip -d /home/${USER}/.local/bin chromedriver_linux64.zip && rm chromedriver_linux64.zip
+./configure.sh
 ```
 
-You can also use the helper script we provided, just execute `./configure.sh`
-
-If you're using another Terminal other than Bash, you'll need to do the last step on whichever file the terminal uses to add environmental variables.
+This works for both `MacOS` and `Linux` currently.
 
 ### Running Parser
 
-Execute the following `./startup.sh` script.
+Execute the `./startup.sh` script.
 
 ### Checking Parsed Results
 

@@ -93,8 +93,9 @@ Fetch Opportunities Data From Page Into CSV File
     [Arguments]  ${file_path}
 
     ${total_opportunities_on_page}=  Get Total Number Of Opportunities On Page
-    :FOR  ${index}  IN RANGE  1  ${total_opportunities_on_page}+1
-    \    Append Opportunity Data Into CSV File  ${index}  ${file_path}
+    FOR  ${index}  IN RANGE  1  ${total_opportunities_on_page}+1
+      Append Opportunity Data Into CSV File  ${index}  ${file_path}
+    END
 
 
 Append Opportunity Data Into CSV File

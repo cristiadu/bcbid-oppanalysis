@@ -16,9 +16,11 @@ Parse Opportunities Into File
     Log To Console  ${\n}TOTAL PAGES: ${num_pages}
     Create CSV File With Opportunities Headers  ${CSV_PARSED_FILE}
 
-    :FOR  ${page}  IN RANGE  1  ${num_pages}+1
-    \    Open Opportunities Page  ${page}
-    \    Fetch Opportunities Data From Page Into CSV File  ${CSV_PARSED_FILE}
+    FOR  ${page}  IN RANGE  1  ${num_pages}+1
+      Open Opportunities Page  ${page}
+      Fetch Opportunities Data From Page Into CSV File  ${CSV_PARSED_FILE}
+      Log To Console  ${\n}Opportunities successfully parsed into CSV file: ${CSV_PARSED_FILE}
+    END
 
-    Log To Console  ${\n}Opportunities successfully parsed into CSV file: ${CSV_PARSED_FILE}
     [Teardown]    Close Browser
+    
