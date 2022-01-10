@@ -17,6 +17,7 @@ Parse Opportunities Into File
     FOR    ${page}    IN RANGE    1    ${num_pages}+1
         Open Opportunities Page    ${page}
         Fetch Opportunities Data From Page Into CSV File    ${CSV_PARSED_FILE}
-        Log To Console    ${\n}Opportunities successfully parsed into CSV file: ${CSV_PARSED_FILE}
+        Log To Console    Parsing: PAGE ${page} ...
     END
+    Log To Console    ${\n}Opportunities successfully parsed into CSV file: ${CSV_PARSED_FILE}
     [Teardown]    Close Browser

@@ -111,8 +111,8 @@ Get Opportunity Link From Index
 Get Formatted Opportunity Details URL
     [Documentation]    Formats the specific Opportunity URL from provided value of the opportunity link href field. This is done to get the opportunity ID (disID) to construct the URL.
     [Arguments]    ${value_from_href}
-    ${opp_link_split}=    Split String    ${value_from_href}    ${SEPARATOR_FOR_HREF_FROM_OPPORTUNITY_LINK}    2
-    ${opportunity_link_id}=    Replace String    @{opp_link_split}[1]    ${OPPORTUNITY_LINK_REPLACE_DIS_KEY}    ${EMPTY}
+    @{opp_link_split}=    Split String    ${value_from_href}    ${SEPARATOR_FOR_HREF_FROM_OPPORTUNITY_LINK}    2
+    ${opportunity_link_id}=    Replace String    ${opp_link_split}[1]    ${OPPORTUNITY_LINK_REPLACE_DIS_KEY}    ${EMPTY}
     ${opportunity_final_url}=    Format String    ${OPPORTUNITY_DETAILS_PAGE}${OPPORTUNITY_DETAILS_PAGE_ID_ON_REQUEST}    ${opportunity_link_id}
     [Return]    ${opportunity_final_url}
 
